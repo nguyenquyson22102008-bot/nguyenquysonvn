@@ -21,7 +21,8 @@ const publicPaths = [
     ["space.js", "space.js"],
     ["script.js", "script.js"],
     ["auth.js", "auth.js"],
-    ["partials.js", "partials.js"]
+    ["partials.js", "partials.js"],
+    ["analytics.js", "analytics.js"]
 ];
 
 await rm(output, { recursive: true, force: true });

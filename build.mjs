@@ -1,6 +1,6 @@
 import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { extname, join, resolve } from "node:path";
-import { transform } from "esbuild";
+import { build, transform } from "esbuild";
 import { minify } from "html-minifier-terser";
 
 const root = process.cwd();
@@ -21,8 +21,7 @@ const publicPaths = [
     ["space.js", "space.js"],
     ["script.js", "script.js"],
     ["auth.js", "auth.js"],
-    ["partials.js", "partials.js"],
-    ["analytics.js", "analytics.js"]
+    ["partials.js", "partials.js"]
 ];
 
 await rm(output, { recursive: true, force: true });
@@ -31,6 +30,16 @@ await mkdir(output, { recursive: true });
 for (const [sourcePath, outputPath] of publicPaths) {
     await cp(join(root, sourcePath), join(output, outputPath), { recursive: true });
 }
+
+// Bundle analytics.js separately with its dependencies
+await build({
+    entryPoints: [join(root, "analytics.js")],
+    bundle: true,
+    minify: true,
+    format: "esm",
+    outfile: join(output, "analytics.js"),
+    platform: "browser"
+});
 
 async function minifyFiles(directory) {
     for (const entry of await readdir(directory, { withFileTypes: true })) {

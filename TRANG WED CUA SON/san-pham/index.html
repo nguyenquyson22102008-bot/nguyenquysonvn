@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Trang SẢN PHẨM & DỊCH VỤ — website cá nhân của Sơn. Chỗ có dấu ✏️ là nội dung cần sửa thành sản phẩm thật. -->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sản phẩm &amp; Dịch vụ — NGUYEN QUY SON</title>
+  <meta name="theme-color" content="#030409" />
+  <meta name="description" content="Những sản phẩm và dịch vụ của Sơn — nhắn tin để biết chi tiết." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff004c'/%3E%3Cstop offset='0.25' stop-color='%23ffea00'/%3E%3Cstop offset='0.5' stop-color='%2300ffd5'/%3E%3Cstop offset='0.75' stop-color='%2300a8ff'/%3E%3Cstop offset='1' stop-color='%23e100ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='70' font-size='54' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <div id="progress"></div>
+  <canvas id="space" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html"><span class="logo-rainbow">NGUYEN QUY SON</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Trang chủ</a></li>
+        <li><a href="../gioi-thieu/index.html">Giới thiệu</a></li>
+        <li><a href="../so-thich/index.html">Sở thích</a></li>
+        <li><a href="../san-pham/index.html" class="active" aria-current="page">Sản phẩm</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../ky-niem/index.html">Kỷ niệm</a></li>
+        <li><a href="../lien-he/index.html">Liên hệ</a></li>
+        <li><a href="../dang-nhap/index.html" class="nav-auth">Đăng nhập</a></li>
+      </ul>
+      <button class="hamburger" id="burger" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Đầu trang ===== -->
+  <header class="page-hero">
+    <div class="container reveal">
+      <div class="sec-tag">Sản phẩm &amp; Dịch vụ</div>
+      <h1>Những gì <span class="grad-text">mình làm ra</span></h1>
+      <p>Bạn thấy thứ mình làm hữu ích? Nhắn cho mình để biết chi tiết nhé!</p>
+    </div>
+  </header>
+
+  <!-- ===== Danh sách sản phẩm ===== -->
+  <section class="tight">
+    <div class="container">
+      <!-- ✏️ Thay 3 thẻ dưới đây bằng sản phẩm/dịch vụ thật của bạn (tên, mô tả, giá) -->
+      <div class="note-banner reveal">
+        Gợi ý: 3 thẻ dưới đây là chỗ trống mẫu — bạn hãy thay bằng sản phẩm thật của mình
+        (nói mình biết để mình thay giúp cũng được!).
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <h3>Dịch vụ của bạn 1</h3>
+          <p>Mô tả ngắn gọn: bạn làm gì, khách hàng nhận được gì, vì sao nên chọn bạn.</p>
+          <span class="price">Giá: liên hệ</span>
+        </div>
+        <div class="card reveal" style="--d:.08s">
+          <h3>Sản phẩm của bạn 2</h3>
+          <p>Mô tả ngắn gọn về sản phẩm: đặc điểm nổi bật, ai nên dùng, dùng như thế nào.</p>
+          <span class="price">Giá: liên hệ</span>
+        </div>
+        <div class="card reveal" style="--d:.16s">
+          <h3>Sản phẩm của bạn 3</h3>
+          <p>Mô tả ngắn gọn về sản phẩm: đặc điểm nổi bật, ai nên dùng, dùng như thế nào.</p>
+          <span class="price">Giá: liên hệ</span>
+        </div>
+      </div>
+
+      <div class="reveal" style="text-align: center; margin-top: 44px;">
+        <a class="btn btn-primary" href="../lien-he/index.html">Nhắn cho mình để đặt hàng</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-nav">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../gioi-thieu/index.html">Giới thiệu</a>
+        <a href="../so-thich/index.html">Sở thích</a>
+        <a href="../san-pham/index.html">Sản phẩm</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../ky-niem/index.html">Kỷ niệm</a>
+        <a href="../lien-he/index.html">Liên hệ</a>
+        <a href="../dang-nhap/index.html">Đăng nhập</a>
+      </div>
+      © <span id="year"></span> NGUYEN QUY SON — Góc nhỏ của mình trên internet
+    </div>
+  </footer>
+
+  <script src="../space.js"></script>
+  <script src="../script.js"></script>
+  <script src="../auth.js"></script>
+</body>
+</html>

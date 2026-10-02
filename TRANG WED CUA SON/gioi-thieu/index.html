@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Trang GIỚI THIỆU — website cá nhân của Sơn. Chỗ có dấu ✏️ là nội dung cần sửa thành thông tin thật. -->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu — NGUYEN QUY SON</title>
+  <meta name="theme-color" content="#030409" />
+  <meta name="description" content="Giới thiệu về Sơn — người đa nhiệm: vừa học, vừa làm, vừa kinh doanh." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff004c'/%3E%3Cstop offset='0.25' stop-color='%23ffea00'/%3E%3Cstop offset='0.5' stop-color='%2300ffd5'/%3E%3Cstop offset='0.75' stop-color='%2300a8ff'/%3E%3Cstop offset='1' stop-color='%23e100ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='70' font-size='54' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <div id="progress"></div>
+  <canvas id="space" aria-hidden="true"></canvas>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html"><span class="logo-rainbow">NGUYEN QUY SON</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Trang chủ</a></li>
+        <li><a href="../gioi-thieu/index.html" class="active" aria-current="page">Giới thiệu</a></li>
+        <li><a href="../so-thich/index.html">Sở thích</a></li>
+        <li><a href="../san-pham/index.html">Sản phẩm</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../ky-niem/index.html">Kỷ niệm</a></li>
+        <li><a href="../lien-he/index.html">Liên hệ</a></li>
+        <li><a href="../dang-nhap/index.html" class="nav-auth">Đăng nhập</a></li>
+      </ul>
+      <button class="hamburger" id="burger" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Đầu trang ===== -->
+  <header class="page-hero">
+    <div class="container reveal">
+      <div class="sec-tag">Giới thiệu</div>
+      <h1>Mình là <span class="grad-text">Sơn</span></h1>
+      <p>Vừa học, vừa làm, vừa kinh doanh — và luôn giữ cho mình bốn niềm đam mê.</p>
+    </div>
+  </header>
+
+  <!-- ===== Câu chuyện ===== -->
+  <section class="tight">
+    <div class="container">
+      <div class="about-flex reveal">
+        <div class="avatar">S</div>
+        <div class="about-text">
+          <h2 class="sec-title">Một chút về mình</h2>
+          <!-- ✏️ Sửa 2 đoạn dưới đây thành câu chuyện của bạn -->
+          <p>
+            Mình là <strong>Sơn</strong> — một người "đa nhiệm": vừa học hỏi, vừa đi làm,
+            vừa tự kinh doanh những điều mình yêu thích. Với mình, cuộc sống là để trải nghiệm,
+            nên mình không muốn gói mình trong một lĩnh vực nào cả.
+          </p>
+          <p>
+            Ngoài giờ bận rộn, mình đam mê thể thao, âm nhạc, du lịch và công nghệ.
+            Trang web này là nơi mình gom tất cả lại: giới thiệu bản thân, viết những dòng suy nghĩ,
+            lưu giữ những khoảnh khắc đẹp và giới thiệu những sản phẩm, dịch vụ mình làm ra.
+          </p>
+          <div class="stats">
+            <div class="stat"><h3 class="grad-text">4</h3><span>Sở thích đam mê</span></div>
+            <div class="stat"><h3 class="grad-text">∞</h3><span>Năng lượng mỗi ngày</span></div>
+            <div class="stat"><h3 class="grad-text">100%</h3><span>Chính là mình</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✏️ Đổi câu trích dẫn theo ý bạn -->
+      <div class="card reveal" style="text-align: center; margin-top: 44px;">
+        <p style="font-size: 1.2rem; color: var(--text);">
+          "Cuộc sống là để trải nghiệm — mình không muốn gói mình trong một lĩnh vực nào cả."
+        </p>
+      </div>
+
+      <div class="reveal" style="text-align: center; margin-top: 40px;">
+        <a class="btn btn-primary" href="../so-thich/index.html">Xem sở thích của mình</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-nav">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../gioi-thieu/index.html">Giới thiệu</a>
+        <a href="../so-thich/index.html">Sở thích</a>
+        <a href="../san-pham/index.html">Sản phẩm</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../ky-niem/index.html">Kỷ niệm</a>
+        <a href="../lien-he/index.html">Liên hệ</a>
+        <a href="../dang-nhap/index.html">Đăng nhập</a>
+      </div>
+      © <span id="year"></span> NGUYEN QUY SON — Góc nhỏ của mình trên internet
+    </div>
+  </footer>
+
+  <script src="../space.js"></script>
+  <script src="../script.js"></script>
+  <script src="../auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- Trang KỶ NIỆM (album ảnh & video) — website cá nhân của Sơn.
+     Cách thêm ảnh mới: chép ảnh vào thư mục media/images rồi chép thêm một khối
+     <figure> ... </figure> giống các khối dưới đây, đổi tên file trong src và sửa dòng chú thích.
+     Cách thêm video: chép video vào media/videos rồi làm tương tự trong phần "Thước phim".
+     Nhấn vào ảnh sẽ mở xem toàn màn hình (lightbox). -->
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kỷ niệm — NGUYEN QUY SON</title>
+  <meta name="theme-color" content="#030409" />
+  <meta name="description" content="Album những khoảnh khắc đáng nhớ của Sơn." />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff004c'/%3E%3Cstop offset='0.25' stop-color='%23ffea00'/%3E%3Cstop offset='0.5' stop-color='%2300ffd5'/%3E%3Cstop offset='0.75' stop-color='%2300a8ff'/%3E%3Cstop offset='1' stop-color='%23e100ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='70' font-size='54' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="progress"></div>
+  <canvas id="space" aria-hidden="true"></canvas>
+
+  <div data-partial="nav"></div>
+
+  <!-- ===== Đầu trang ===== -->
+  <header class="page-hero">
+    <div class="container reveal">
+      <div class="sec-tag">Kỷ niệm</div>
+      <h1>Khoảnh khắc <span class="grad-text">đáng nhớ</span></h1>
+      <p>Những tấm ảnh và thước phim mình muốn lưu giữ theo thời gian — nhấn vào ảnh để xem toàn màn hình.</p>
+    </div>
+  </header>
+
+  <!-- ===== Hình ảnh ===== -->
+  <section class="tight">
+    <div class="container">
+      <h2 class="sec-title">Hình ảnh</h2>
+      <div class="memory-grid">
+        <figure class="memory-card reveal">
+          <img src="media/images/IMG_1495_Original.jpg" alt="Những khoảnh khắc đáng nhớ" />
+          <figcaption>Những khoảnh khắc đáng nhớ</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <img src="media/images/IMG_1663_Original.jpg" alt="Đêm cuối cùng ở nơi ấy" loading="lazy" />
+          <figcaption>Đêm cuối cùng ở nơi ấy</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <img src="media/images/IMG_0328.jpg" alt="Vừa vui vừa bền bỉ" loading="lazy" />
+          <figcaption>Vừa vui vừa bền bỉ</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal">
+          <img src="media/images/438245654_1394436714602260_2223458837784903012_n.jpg" alt="Gặp gỡ bạn bè"
+            loading="lazy" />
+          <figcaption>Gặp gỡ bạn bè</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <img src="media/images/454693680_1725323968280739_6243388148878207231_n.jpg"
+            alt="Khoảnh khắc nhiều tiếng cười" loading="lazy" />
+          <figcaption>Khoảnh khắc nhiều tiếng cười</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <img src="media/images/photo_2026-10-01_09-16-24.jpg" alt="Để nhớ mãi những ngày ấy" loading="lazy" />
+          <figcaption>Để nhớ mãi những ngày ấy</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal">
+          <img src="media/images/1b8dd644-ccce-47f6-bb6d-2f621a1de309 (1).jpg" alt="Bầu trời qua tán lá"
+            loading="lazy" />
+          <figcaption>Bầu trời qua tán lá</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <img src="media/images/3F499EB5-A8C4-4B8D-8F14-7E4E779A2EF4.jpg" alt="Những buổi làm cùng nhau"
+            loading="lazy" />
+          <figcaption>Những buổi làm cùng nhau</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <img src="media/images/456592557_859635412774153_4756164015475214303_n.jpg" alt="Tán cây xanh giữa trưa"
+            loading="lazy" />
+          <figcaption>Tán cây xanh giữa trưa</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal">
+          <img src="media/images/456637022_1673974030115941_4672388320916849686_n.jpg" alt="Trời mây chiều cuối xóm"
+            loading="lazy" />
+          <figcaption>Trời mây chiều cuối xóm</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <img src="media/images/IMG_0552.PNG" alt="Đêm game cùng đồng đội" loading="lazy" />
+          <figcaption>Đêm game cùng đồng đội</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <img src="media/images/photo_2026-10-01_09-16-03.jpg" alt="Biển đêm tĩnh lặng" loading="lazy" />
+          <figcaption>Biển đêm tĩnh lặng</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal">
+          <img src="media/images/photo_2026-10-01_09-16-05.jpg" alt="Mưa đêm trên sân trường" loading="lazy" />
+          <figcaption>Mưa đêm trên sân trường</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <img src="media/images/photo_2026-10-01_09-16-07.jpg" alt="Sân trường buổi sớm" loading="lazy" />
+          <figcaption>Sân trường buổi sớm</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <img src="media/images/photo_2026-10-01_09-16-09.jpg" alt="Lối về trong đêm" loading="lazy" />
+          <figcaption>Lối về trong đêm</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal">
+          <img src="media/images/photo_2026-10-01_09-16-10.jpg" alt="Dãy hiên trong mưa đêm" loading="lazy" />
+          <figcaption>Dãy hiên trong mưa đêm</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <img src="media/images/photo_2026-10-01_09-16-12.jpg" alt="Mây giông trên trường ngày ấy" loading="lazy" />
+          <figcaption>Mây giông trên trường ngày ấy</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <img src="media/images/photo_2026-10-01_09-16-13.jpg" alt="Ván bài dưới ánh đèn" loading="lazy" />
+          <figcaption>Ván bài dưới ánh đèn</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal">
+          <img src="media/images/photo_2026-10-01_09-16-15.jpg" alt="Ánh đèn sân trường về đêm" loading="lazy" />
+          <figcaption>Ánh đèn sân trường về đêm</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <img src="media/images/photo_2026-10-01_09-16-18.jpg" alt="Nắng vàng trên sân trường" loading="lazy" />
+          <figcaption>Nắng vàng trên sân trường</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <img src="media/images/photo_2026-10-01_09-16-21.jpg" alt="Biển xanh ngày hè" loading="lazy" />
+          <figcaption>Biển xanh ngày hè</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Thước phim ===== -->
+  <section class="tight">
+    <div class="container">
+      <h2 class="sec-title">Thước phim</h2>
+      <div class="memory-grid">
+        <figure class="memory-card reveal">
+          <video src="media/videos/IMG_0668.MP4" controls playsinline preload="metadata"></video>
+          <figcaption>Clip lưu giữ cảm xúc</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <video src="media/videos/IMG_1125.MOV" controls playsinline preload="metadata"></video>
+          <figcaption>Khoảnh khắc sống động</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.12s">
+          <video src="media/videos/IMG_1126.MOV" controls playsinline preload="metadata"></video>
+          <figcaption>Giây phút đáng nhớ nhất</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal">
+          <video src="media/videos/copy_3A9B9D04-280E-4978-A995-B16EF31F3CF0.mov" controls playsinline
+            preload="metadata"></video>
+          <figcaption>Một ngày vui không thể quên</figcaption>
+        </figure>
+
+        <figure class="memory-card reveal" style="--d:.06s">
+          <video src="media/videos/IMG_1663_Original.mov" controls playsinline preload="metadata"></video>
+          <figcaption>Đêm cuối cùng ở nơi ấy (bản phim)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Xem ảnh toàn màn hình ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-btn lb-close" type="button" aria-label="Đóng">&#215;</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Ảnh trước">&#8249;</button>
+    <figure class="lb-figure">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" type="button" aria-label="Ảnh sau">&#8250;</button>
+  </div>
+
+  <div data-partial="footer"></div>
+
+  <script src="partials.js"></script>
+  <script src="space.js"></script>
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script>
+    // Lightbox — nhấn vào ảnh để mở xem toàn màn hình, nút ‹ › hoặc phím mũi tên để đổi ảnh, Esc để đóng
+    (function () {
+      var cards = Array.prototype.slice.call(document.querySelectorAll(".memory-grid img"));
+      var lb = document.getElementById("lightbox");
+      var lbImg = document.getElementById("lightboxImg");
+      var lbCap = document.getElementById("lightboxCap");
+      var current = 0;
+
+      function show(i) {
+        current = (i + cards.length) % cards.length;
+        var img = cards[current];
+        lbImg.src = img.currentSrc || img.src;
+        lbImg.alt = img.alt;
+        var cap = img.closest("figure").querySelector("figcaption");
+        lbCap.textContent = cap ? cap.textContent : "";
+      }
+
+      function open(i) {
+        show(i);
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function close() {
+        lb.classList.remove("open");
+        lb.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      cards.forEach(function (img, i) {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", function () { open(i); });
+      });
+      document.querySelector(".lb-prev").addEventListener("click", function () { show(current - 1); });
+      document.querySelector(".lb-next").addEventListener("click", function () { show(current + 1); });
+      document.querySelector(".lb-close").addEventListener("click", close);
+      lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+      window.addEventListener("keydown", function (e) {
+        if (!lb.classList.contains("open")) return;
+        if (e.key === "Escape") close();
+        if (e.key === "ArrowLeft") show(current - 1);
+        if (e.key === "ArrowRight") show(current + 1);
+      });
+    })();
+  </script>
+</body>
+
+</html>
